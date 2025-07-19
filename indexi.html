@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List by PRACHI</title>
+    <!-- CSS Import -->
+    <link rel="stylesheet" href="styli.css">
+    <!-- End of CSS Import -->
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;0,900;1,400&family=Montserrat:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+    <!-- End of Fonts -->
+</head>
+<body>
+    <!-- App Wrapper -->
+    <main class="app">
+        <!-- Greeting -->
+        <section class="greeting">
+            <h2 class="title">
+                THE TASK NEST OF <input type="text" id="name" placeholder="Name here">
+            </h2>
+        </section>
+        <!-- End of Greeting -->
+
+        <!-- New Todo -->
+        <section class="create-todo">
+            <h3><p class="hover-underline">CREATE A TODO</p></h3>
+            <form id="new-todo-form">
+                <h4><p class="hover-underline">What's on your todo?</p></h4>
+                <input 
+                    type="text" 
+                    placeholder="e.g. Get some milk"
+                    name="content"
+                    id="content" />
+
+                <h4><p class="hover-underline">Pick a category</p></h4>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="category" id="category1" value="business"> 
+                        <span class="bubble business"></span>
+                        <div><p class="hover-underline">Business</p></div>
+                    </label>
+                    <label>
+                        <input type="radio" name="category" id="category2" value="personal">
+                        <span class="bubble personal"></span>
+                        <div><p class="hover-underline">Personal</p></div>
+                    </label>
+                </div>
+
+                <input type="submit" value="Add todo">
+            </form>
+        </section>
+        <!-- End of New Todo -->
+
+        <!-- Upcoming Tasks -->
+        <section class="create-todo">
+            <h3><p class="hover-underline">ADD AN UPCOMING TASK</p></h3>
+            <form id="upcoming-task-form">
+                <h4><p class="hover-underline">What's the task?</p></h4>
+                <input 
+                    type="text" 
+                    placeholder="e.g. Project deadline"
+                    name="upcoming-content"
+                    id="upcoming-content" />
+
+                <h4><p class="hover-underline">Pick a category</p></h4>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="upcoming-category" id="upcoming-category1" value="business"> 
+                        <span class="bubble business"></span>
+                        <div><p class="hover-underline">Business</p></div>
+                    </label>
+                    <label>
+                        <input type="radio" name="upcoming-category" id="upcoming-category2" value="personal">
+                        <span class="bubble personal"></span>
+                        <div><p class="hover-underline">Personal</p></div>
+                    </label>
+                </div>
+
+                <h4>Due Date</h4>
+                <input 
+                    type="datetime-local" 
+                    name="upcoming-date"
+                    id="upcoming-date" />
+
+                <input type="submit" value="Add upcoming task">
+            </form>
+        </section>
+        <!-- End of Upcoming Tasks -->
+
+        <!-- Todo List -->
+        <section class="todo-list">
+            <h3><p class="hover-underline">TODO LIST</p></h3>
+            <div class="list" id="todo-list"></div>
+        </section>
+        <!-- End of Todo List -->
+
+        <!-- Completed Tasks -->
+        <section class="todo-list">
+            <h3><p class="hover-underline">COMPLETED TASKS</p></h3>
+            <div class="list" id="completed-tasks-list"></div>
+        </section>
+        <!-- End of Completed Tasks -->
+
+        <!-- Upcoming Tasks List -->
+        <section class="todo-list">
+            <h3><p class="hover-underline">UPCOMING TASKS</p></h3>
+            <div class="list" id="upcoming-tasks-list"></div>
+        </section>
+        <!-- End of Upcoming Tasks List -->
+
+        <!-- Quotes -->
+        <section class="quotes">
+            <div class="quote"></div>
+        </section>
+        <!-- End of Quotes -->
+
+        <!-- Navigation Bar -->
+<nav class="navbar">
+    <div class="nav-item">
+        <a href="#" class="nav-link" id="home-link"><p class="hover-underline">Home</p></a>
+    </div>
+    <div class="nav-item">
+        <input type="text" id="search-input" placeholder="Search" class="nav-search" />
+    </div>
+    <div class="nav-item">
+        <a href="#" class="nav-link" id="calendar-link"><p class="hover-underline">Calendar</p></a>
+    </div>
+    <div class="nav-item theme-toggle">
+        <label>
+            <input type="checkbox" id="theme-toggle">
+            <div class="toggle-switch"></div>
+            <span class="toggle-label">Night Mode</span>
+        </label>
+    </div>
+    <div>
+        <button id="dark-mode-toggle">Mode</button>
+        <select id="theme-select">
+            <option value="">Default</option>
+            <option value="lightgray">Light Gray</option>
+            <option value="lightblue">Light Blue</option>
+        </select>
+    </div>
+</nav>
+<!-- End of Navigation Bar -->
+
+    </main>
+    <!-- End of App Wrapper -->
+
+    <!-- JS Import -->
+    <script src="myi.js"></script>
+    <!-- End of JS Import -->
+</body>
+</html>
